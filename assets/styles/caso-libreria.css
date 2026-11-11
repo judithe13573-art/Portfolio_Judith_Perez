@@ -858,3 +858,10 @@ body.ed .pf-footer,
 }
 .ed-window__panel .ed-kicker { margin-bottom: 10px; }
 .ed-window__line { font-size: clamp(26px, 3.4vw, 42px); }
+
+/* Portada: marco crema en el arco, con un fino filete kraft */
+.ed-arch img {
+  border: 10px solid var(--ed-paper);
+  box-shadow: 0 0 0 2px var(--ed-kraft), 0 30px 60px rgba(0,0,0,.35);
+  box-sizing: border-box;
+}
