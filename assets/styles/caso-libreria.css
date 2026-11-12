@@ -775,7 +775,6 @@ body.ed { background: var(--ed-paper); }
    Verjurado (papel con líneas): las bandas crema más oscuras.
    Las imágenes son mapas de relieve en gris que se multiplican sobre el color crema. */
 body.ed,
-body.ed .pf-nav,
 body.ed .pf-footer,
 .ed-card, .ed-event, .ed-level:not(.ed-level--top), .ed-pillar,
 .ed-type__item, .ed-dos div, .ed-brief div,
