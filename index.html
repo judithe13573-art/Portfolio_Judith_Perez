@@ -8,62 +8,79 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" />
-  <link rel="stylesheet" href="assets/styles/portfolio.css?v=20261112b" />
+  <link rel="stylesheet" href="assets/styles/portfolio.css?v=20261112c" />
 </head>
-<body class="pf">
-
-  <!-- NAV -->
-  <header class="pf-nav">
-    <div class="pf-nav__inner">
-      <a href="index.html" class="pf-nav__name" aria-current="page">Judith Pérez</a>
-      <nav class="pf-nav__links" aria-label="Principal">
-        <a href="proyectos.html" class="pf-nav__link">Proyectos</a>
-        <a href="sobre-mi.html" class="pf-nav__link">Sobre mí</a>
-        <a href="contacto.html" class="pf-nav__link pf-nav__link--accent">Contacto</a>
-      </nav>
-    </div>
-  </header>
+<body class="pf pf--home">
 
   <main class="pf-main">
 
-    <!-- HERO -->
-    <section class="pf-hero">
-      <p class="pf-eyebrow pf-hero__eyebrow">Marketing · Identidad de marca · Storytelling</p>
-      <h1 class="pf-hero__title">Historias que dan voz a las marcas.</h1>
-      <div class="pf-hero__row">
-        <p class="pf-hero__lead">Soy Judith, graduada en Marketing, Publicidad y Relaciones Públicas. Me gusta encontrar lo que una marca quiere decir y darle forma: del concepto y las palabras a la identidad visual que la hace reconocible.</p>
-        <a href="proyectos.html" class="pf-link-cta">Ver proyectos →</a>
-      </div>
-    </section>
-
-    <!-- PROYECTO DESTACADO -->
-    <section class="pf-featured">
-      <div class="pf-wrap">
-        <p class="pf-eyebrow">Proyecto destacado</p>
-        <a href="libreria.html" class="pf-featured__card">
-          <span class="pf-media pf-featured__media"><img class="pf-media__img" src="assets/images/libreria/paquetes-kraft.jpg" alt="Libros envueltos en papel kraft con el logotipo de La Esquina y un sello de cera verde" width="1100" height="1229" /></span>
-          <span class="pf-featured__body">
-            <span class="pf-card__number">01</span>
-            <span class="pf-featured__title">La Esquina · Librería de barrio</span>
-            <span class="pf-tag">Identidad visual · Identidad verbal · Packaging · Fidelización</span>
-            <span class="pf-featured__text">"Nos vemos en la esquina": una marca completa, de la capitular y el sello de cera al tono con el que habla y el carné de vecino lector, para que una librería de barrio sea el sitio al que siempre se vuelve.</span>
-            <span class="pf-card__more">Ver proyecto</span>
-          </span>
+    <!-- PORTADA A PANTALLA COMPLETA -->
+    <section class="hm-hero">
+      <header class="hm-hero__top">
+        <a href="index.html" class="hm-hero__name" aria-current="page">
+          <span>Judith Pérez</span>
+          <em>Marketing &amp; identidad de marca</em>
         </a>
+        <nav class="hm-hero__nav" aria-label="Principal">
+          <a href="proyectos.html">Proyectos</a>
+          <a href="sobre-mi.html">Sobre mí</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </header>
+
+      <div class="hm-hero__center">
+        <h1 class="hm-hero__title">Historias que dan <em>voz</em> a las marcas.</h1>
+        <p class="hm-hero__lead">Graduada en Marketing, Publicidad y Relaciones Públicas. Del concepto y las palabras a la identidad visual que hace reconocible a una marca.</p>
+      </div>
+
+      <ul class="hm-hero__contact" aria-label="Contacto">
+        <li><b>M</b><a href="mailto:Judy2002lainez@gmail.com">Judy2002lainez@gmail.com</a></li>
+        <li><b>L</b><a href="https://www.linkedin.com/in/judith-p%C3%A9rez-0028a71b9/" target="_blank" rel="noopener">linkedin/judith-pérez</a></li>
+      </ul>
+
+      <a href="sobre-mi.html" class="hm-hero__photo" aria-label="Sobre mí">
+        <img src="assets/images/sobre-mi/judith.webp" alt="Judith Pérez" width="1968" height="1312" />
+        <span>hola, soy Judith</span>
+      </a>
+
+      <a href="#proyectos" class="hm-hero__down" aria-label="Bajar a los proyectos">
+        <svg viewBox="0 0 40 20" aria-hidden="true"><path d="M2 2 L20 18 L38 2" fill="none" stroke="currentColor" stroke-width="2" /></svg>
+      </a>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="pf-projects hm-projects" id="proyectos">
+      <div class="pf-wrap">
+        <header class="pf-projects__header">
+          <p class="pf-eyebrow">Proyectos</p>
+          <h2 class="pf-projects__title">Ideas contadas de principio a fin</h2>
+        </header>
+
+        <div class="pf-grid">
+          <a href="libreria.html" class="pf-card">
+            <span class="pf-media pf-media--card"><img class="pf-media__img" src="assets/images/libreria/fachada-acera.jpg" alt="Fachada verde botella de La Esquina, librería de barrio, en una esquina soleada con la puerta abierta y el escaparate lleno de libros" width="1400" height="933" loading="lazy" style="object-position: 38% 50%;" /></span>
+            <span class="pf-card__number">01</span>
+            <span class="pf-card__title">La Esquina · Librería de barrio</span>
+            <span class="pf-tag">Identidad visual · Identidad verbal · Packaging · Fidelización</span>
+            <span class="pf-card__more">Ver proyecto</span>
+          </a>
+          <a href="beanywood.html" class="pf-card">
+            <span class="pf-media pf-media--card"><img class="pf-media__img pf-media__img--beany" src="assets/images/beanywood/creative-fuel-ilustracion.jpg" alt="Ilustración de Beany con sombrero trabajando en su portátil junto a una taza de café" width="1026" height="1451" loading="lazy" /></span>
+            <span class="pf-card__number">02</span>
+            <span class="pf-card__title">Beanywood Café · Creative Fuel</span>
+            <span class="pf-tag">Brand strategy · Concepto · Copy · Contenido</span>
+            <span class="pf-card__more">Ver proyecto</span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- ACCESOS -->
-    <section class="pf-wrap pf-teasers">
+    <!-- SOBRE MÍ (acceso) -->
+    <section class="pf-wrap hm-about">
       <a href="sobre-mi.html" class="pf-teaser">
         <span class="pf-eyebrow">Sobre mí</span>
         <span class="pf-teaser__title">"Siempre he encontrado más fácil contar una historia que describirme."</span>
         <span class="pf-card__more">Conóceme</span>
-      </a>
-      <a href="contacto.html" class="pf-teaser">
-        <span class="pf-eyebrow">Contacto</span>
-        <span class="pf-teaser__title">¿Y si hacemos que pase?</span>
-        <span class="pf-card__more">Escríbeme</span>
       </a>
     </section>
 
