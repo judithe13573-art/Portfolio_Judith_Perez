@@ -765,3 +765,51 @@ body.pf--home {
 @media (max-width: 760px) {
   .hm-do__list { grid-template-columns: 1fr; }
 }
+
+/* Sobre mí: herramientas y formación complementaria */
+.pf-tools { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); margin-top: 44px; padding-top: 32px; border-top: 1px solid var(--pf-line); max-width: 760px; }
+.pf-tools__title { font-family: var(--pf-sans); font-size: 13px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--pf-sage); margin-bottom: 16px; }
+.pf-tools__list div { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; padding: 10px 0; border-bottom: 1px dashed var(--pf-line); }
+.pf-tools__list dt { font-family: var(--pf-sans); font-size: 13px; font-weight: 700; color: var(--pf-muted); padding-top: 4px; }
+.pf-tools__list dd { display: flex; flex-wrap: wrap; gap: 6px; }
+.pf-tools__list dd span { padding: 3px 12px; border-radius: 999px; background: var(--pf-paper-warm); border: 1px solid var(--pf-line); font-family: var(--pf-serif); font-size: 17px; color: var(--pf-ink); }
+.pf-tools__list dd em { font-size: 14px; color: var(--pf-muted); }
+.pf-courses { list-style: none; }
+.pf-courses li { display: flex; flex-direction: column; padding: 10px 0 12px; border-bottom: 1px dashed var(--pf-line); }
+.pf-courses strong { font-family: var(--pf-serif); font-weight: 600; font-size: 19px; line-height: 1.25; color: var(--pf-ink); }
+.pf-courses span { font-family: var(--pf-sans); font-size: 13px; color: var(--pf-muted); margin-top: 2px; }
+@media (max-width: 760px) { .pf-tools { grid-template-columns: 1fr; } }
+
+/* ═══ Barra superior (todas las páginas menos Inicio) ═══
+   Más fina, translúcida y con el mismo nombre + subtítulo que la portada. */
+.pf-nav {
+  background: rgba(252,250,243,.82);
+  -webkit-backdrop-filter: blur(10px) saturate(1.2);
+          backdrop-filter: blur(10px) saturate(1.2);
+  border-bottom: 1px solid rgba(22,64,44,.08);
+}
+.pf-nav__inner { height: 70px; }
+.pf .pf-nav__name { display: flex; flex-direction: column; line-height: 1.1; font-style: normal; }
+.pf .pf-nav__name span { font-family: var(--pf-sans); font-weight: 700; font-size: 15px; letter-spacing: .02em; color: #16402C; }
+.pf .pf-nav__name em { font-family: var(--pf-serif); font-style: italic; font-weight: 500; font-size: 17px; color: #1E7A3E; }
+.pf-nav__links { gap: 6px; }
+.pf .pf-nav__link {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  text-transform: none;
+  color: #16402C;
+  transition: background-color .2s ease, color .2s ease;
+}
+.pf .pf-nav__link:hover { background: #E2F1DE; color: #16402C; }
+.pf .pf-nav__link[aria-current="page"] { background: #E2F1DE; color: #16402C; border: 0; padding-bottom: 8px; }
+.pf .pf-nav__link--accent { margin-left: 6px; background: #16402C; color: #F3EBDD; border: 0; padding-bottom: 8px; }
+.pf .pf-nav__link--accent:hover, .pf .pf-nav__link--accent[aria-current="page"] { background: #1E7A3E; color: #F3EBDD; }
+@media (max-width: 760px) {
+  .pf-nav__inner { height: auto; padding-top: 12px; padding-bottom: 12px; }
+  .pf-nav__links { gap: 4px; }
+  .pf .pf-nav__link { padding: 7px 11px; font-size: 13px; }
+}
