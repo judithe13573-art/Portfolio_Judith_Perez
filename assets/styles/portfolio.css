@@ -744,3 +744,24 @@ body.pf--home {
 /* Botón «Ver proyectos»: algo más pequeño y centrado */
 .hm-hero__btn { display: flex; width: fit-content; margin: 26px auto 0; padding: 11px 22px; font-size: 13px; gap: 8px; }
 .hm-hero__btn span { font-size: 15px; }
+
+/* Inicio: franja «Qué hago» */
+.hm-do { padding-top: clamp(56px, 8vw, 96px); }
+.hm-do__list { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 28px); margin-top: 18px; }
+.hm-do__item { padding: 26px 26px 28px; border-radius: 22px; background: rgba(255,255,255,.55); box-shadow: 0 1px 0 rgba(255,255,255,.8) inset, 0 18px 40px rgba(22,64,44,.07); }
+.hm-do__num { display: block; font-family: var(--pf-serif); font-style: italic; font-size: 34px; line-height: 1; color: #1E7A3E; margin-bottom: 14px; }
+.hm-do__title { font-family: var(--pf-serif); font-weight: 600; font-size: 24px; line-height: 1.15; color: #16402C; margin-bottom: 8px; }
+.hm-do__item p { font-family: var(--pf-sans); font-size: 15px; line-height: 1.6; color: rgba(22,64,44,.8); }
+
+/* Inicio: cierre para contactar */
+.hm-contact { max-width: var(--pf-max); margin: 0 auto; padding: clamp(48px, 7vw, 88px) var(--pf-gutter) clamp(64px, 9vw, 110px); text-align: center; }
+.hm-contact__title { font-family: var(--pf-serif); font-weight: 500; font-size: clamp(36px, 5vw, 60px); line-height: 1.05; color: #16402C; }
+.hm-contact__title em { font-style: italic; color: #1E7A3E; }
+.hm-contact .hm-hero__btn { margin-top: 26px; }
+.hm-contact__link { display: inline-block; margin-top: 16px; font-family: var(--pf-serif); font-style: italic; font-size: 18px; color: #16402C; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(22,64,44,.35); }
+.hm-contact__link:hover { color: #1E7A3E; }
+.pf--home .hm-about { padding-bottom: 0; }
+
+@media (max-width: 760px) {
+  .hm-do__list { grid-template-columns: 1fr; }
+}
