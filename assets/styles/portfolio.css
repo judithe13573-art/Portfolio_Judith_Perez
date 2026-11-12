@@ -714,3 +714,33 @@ body.pf--home {
 /* Inicio: subtítulo del nombre en blanco, con una sombra suave para que se lea */
 .hm-hero__name em { color: #FFFFFF; text-shadow: 0 1px 2px rgba(22,64,44,.35), 0 2px 14px rgba(22,64,44,.35); }
 @media (max-width: 700px) { .hm-hero__contact { padding-bottom: 0; } }
+
+/* Inicio: botón «Ver proyectos» de la portada */
+.hm-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  padding: 15px 30px;
+  border-radius: 999px;
+  background: #16402C;
+  color: #F3EBDD !important;
+  font-family: var(--pf-sans);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 14px 30px rgba(22,64,44,.22);
+  transition: translate .25s ease, box-shadow .25s ease, background-color .25s ease;
+}
+.hm-hero__btn span { font-size: 17px; transition: translate .25s ease; }
+.hm-hero__btn:hover, .hm-hero__btn:focus-visible { background: #1E7A3E; translate: 0 -2px; box-shadow: 0 18px 36px rgba(22,64,44,.28); }
+.hm-hero__btn:hover span { translate: 0 3px; }
+.hm-hero__btn:focus-visible { outline: 3px solid #1E7A3E; outline-offset: 3px; }
+
+/* Inicio: subtítulo del nombre en verde oscuro (sustituye al blanco) */
+.hm-hero__name em { color: #16402C; text-shadow: none; }
+/* Botón «Ver proyectos»: algo más pequeño y centrado */
+.hm-hero__btn { display: flex; width: fit-content; margin: 26px auto 0; padding: 11px 22px; font-size: 13px; gap: 8px; }
+.hm-hero__btn span { font-size: 15px; }

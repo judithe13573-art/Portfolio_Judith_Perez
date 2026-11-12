@@ -360,3 +360,10 @@ body.bw { background: var(--bw-cream); }
 @media (max-width: 600px) and (prefers-reduced-motion: reduce) {
   .js .bw-step.bw-reveal:nth-child(2) { transform: none; }
 }
+
+/* Tu papel en el proyecto (portada) */
+.bw-hero__role { max-width: 460px; margin: -8px 0 24px; padding-left: 14px; border-left: 3px solid var(--bw-mustard); font-size: 16px; line-height: 1.5; color: var(--bw-brown); }
+.bw-hero__role strong { color: var(--bw-mustard-text); }
+
+/* «Beany ficha por tu oficina»: la frase principal de la propuesta */
+.bw-display--xl { font-size: clamp(48px, 7.4vw, 104px); line-height: .95; margin-bottom: 22px; }
