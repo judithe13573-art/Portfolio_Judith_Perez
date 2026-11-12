@@ -813,3 +813,36 @@ body.pf--home {
   .pf-nav__links { gap: 4px; }
   .pf .pf-nav__link { padding: 7px 11px; font-size: 13px; }
 }
+
+/* Barra superior en verde oscuro: destaca y encaja con todas las páginas */
+.pf-nav {
+  background: rgba(22,64,44,.96);
+  border-bottom: 1px solid rgba(201,226,196,.18);
+  box-shadow: 0 8px 24px rgba(22,64,44,.18);
+}
+.pf .pf-nav__name span { color: #F3EBDD; }
+.pf .pf-nav__name em { color: #A9D3A8; }
+.pf .pf-nav__link { color: #F3EBDD; }
+.pf .pf-nav__link:hover { background: rgba(243,235,221,.12); color: #FFFFFF; }
+.pf .pf-nav__link[aria-current="page"] { background: rgba(169,211,168,.22); color: #FFFFFF; }
+.pf .pf-nav__link--accent { background: #A9D3A8; color: #16402C; }
+.pf .pf-nav__link--accent:hover, .pf .pf-nav__link--accent[aria-current="page"] { background: #F3EBDD; color: #16402C; }
+.pf .pf-nav__link:focus-visible { outline: 2px solid #A9D3A8; outline-offset: 2px; }
+.pf-nav { border-bottom: 2px solid rgba(169,211,168,.6); }
+
+/* Barra superior: blanca, casi opaca, flotando con sombra suave (sustituye a la verde) */
+.pf-nav {
+  background: rgba(255,255,255,.94);
+  -webkit-backdrop-filter: blur(10px) saturate(1.2);
+          backdrop-filter: blur(10px) saturate(1.2);
+  border-bottom: 0;
+  box-shadow: 0 1px 0 rgba(22,64,44,.06), 0 10px 30px rgba(22,64,44,.10);
+}
+.pf .pf-nav__name span { color: #16402C; }
+.pf .pf-nav__name em { color: #1E7A3E; }
+.pf .pf-nav__link { color: #16402C; }
+.pf .pf-nav__link:hover { background: #E2F1DE; color: #16402C; }
+.pf .pf-nav__link[aria-current="page"] { background: #E2F1DE; color: #16402C; }
+.pf .pf-nav__link--accent { background: #16402C; color: #F3EBDD; }
+.pf .pf-nav__link--accent:hover, .pf .pf-nav__link--accent[aria-current="page"] { background: #1E7A3E; color: #F3EBDD; }
+.pf .pf-nav__link:focus-visible { outline: 2px solid #1E7A3E; outline-offset: 2px; }
