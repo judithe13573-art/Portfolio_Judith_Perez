@@ -710,3 +710,6 @@ body.pf--home {
 }
 .pf--home .pf-teaser__title { color: #16402C; }
 .pf--home .pf-footer { background: transparent; border-top: 1px solid rgba(22,64,44,.12); color: #2F5B43; }
+
+/* Inicio: subtítulo del nombre en blanco, con una sombra suave para que se lea */
+.hm-hero__name em { color: #FFFFFF; text-shadow: 0 1px 2px rgba(22,64,44,.35), 0 2px 14px rgba(22,64,44,.35); }
