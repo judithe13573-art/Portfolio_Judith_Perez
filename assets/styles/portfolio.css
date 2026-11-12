@@ -653,3 +653,60 @@ html:has(.pf--home) { scroll-behavior: smooth; }
 .hm-hero__photo { box-shadow: 0 0 0 1.5px var(--hm-green), 0 18px 40px rgba(22,64,44,.25); }
 .hm-hero__nav { padding: 8px 18px; border-radius: 999px; background: rgba(255,255,255,.72); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); font-weight: 700; }
 .hm-hero__name { padding: 6px 14px 8px; border-radius: 16px; background: rgba(255,255,255,.6); }
+
+/* ═══ Inicio: humo muy difuminado y estética verde claro en toda la página ═══ */
+body.pf--home {
+  --hm-mint: #EEF7EC;
+  --hm-mint-2: #E2F1DE;
+  background: var(--hm-mint);
+}
+/* El humo pasa a una capa propia, muy desenfocada */
+.hm-hero { isolation: isolate; background: var(--hm-mint, #EEF7EC); }
+.hm-hero::before {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  z-index: -2;
+  background: url("../images/inicio/humo-verde.jpg") center / cover no-repeat;
+  filter: blur(48px) saturate(.85);
+  opacity: .75;
+}
+/* Velo claro y fundido hacia el resto de la página */
+.hm-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(70% 60% at 45% 48%, rgba(255,255,255,.7), rgba(255,255,255,.2) 65%, transparent),
+    linear-gradient(to bottom, transparent 70%, var(--hm-mint, #EEF7EC));
+}
+/* Con el fondo tan suave ya no hacen falta las etiquetas blancas */
+.hm-hero__nav, .hm-hero__name, .hm-hero__contact li { background: none; -webkit-backdrop-filter: none; backdrop-filter: none; padding-left: 0; padding-right: 0; }
+.hm-hero__nav { padding: 0; }
+
+/* Proyectos y Sobre mí con la misma atmósfera */
+.pf--home .hm-projects { background: transparent; padding-top: clamp(48px, 7vw, 88px); }
+.pf--home .pf-eyebrow { color: #1E7A3E; }
+.pf--home .pf-projects__title { color: #16402C; }
+.pf--home .pf-card {
+  padding: 14px 14px 20px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.55);
+  box-shadow: 0 1px 0 rgba(255,255,255,.8) inset, 0 18px 40px rgba(22,64,44,.08);
+  transition: translate .3s ease, box-shadow .3s ease;
+}
+.pf--home .pf-card:hover { translate: 0 -4px; box-shadow: 0 1px 0 rgba(255,255,255,.8) inset, 0 26px 50px rgba(22,64,44,.14); }
+.pf--home .pf-card .pf-media { border-radius: 14px; overflow: hidden; }
+.pf--home .pf-card__title { color: #16402C; }
+.pf--home .pf-tag { color: #1E7A3E; }
+.pf--home .pf-card__more { color: #16402C; }
+.pf--home .pf-teaser {
+  border: 0;
+  border-radius: 22px;
+  padding: clamp(28px, 4vw, 44px);
+  background: linear-gradient(135deg, rgba(255,255,255,.65), rgba(226,241,222,.7));
+  box-shadow: 0 18px 40px rgba(22,64,44,.08);
+}
+.pf--home .pf-teaser__title { color: #16402C; }
+.pf--home .pf-footer { background: transparent; border-top: 1px solid rgba(22,64,44,.12); color: #2F5B43; }
