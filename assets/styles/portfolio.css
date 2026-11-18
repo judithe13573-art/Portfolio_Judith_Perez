@@ -925,7 +925,7 @@ body.pf--work { background: #EAE5DC; }
     radial-gradient(50% 80% at 85% 0%, rgba(25,195,214,.45), transparent 60%),
     linear-gradient(180deg, #0E5AA7 0%, #0A2A5E 60%, #061B3F 100%);
 }
-.wk-cover-aq__inner { display: flex; flex-direction: column; justify-content: center; padding: clamp(20px, 4vw, 56px); color: #FFFFFF; font-family: 'Montserrat', var(--pf-sans); transition: scale .8s cubic-bezier(.2,.7,.2,1); }
+.wk-cover-aq__inner { display: flex; flex-direction: column; justify-content: center; padding: clamp(20px, 4vw, 56px); color: #FFFFFF; font-family: arboria, 'Outfit', var(--pf-sans); transition: scale .8s cubic-bezier(.2,.7,.2,1); }
 .wk-item:hover .wk-cover-aq__inner { scale: 1.03; }
 .wk-cover-aq__signal { display: inline-flex; align-items: flex-end; gap: 6px; height: 40px; color: #19C3D6; margin-bottom: 14px; }
 .wk-cover-aq__signal i { display: block; width: 11px; border: 3px solid currentColor; border-radius: 3px; }
@@ -933,9 +933,9 @@ body.pf--work { background: #EAE5DC; }
 .wk-cover-aq__signal i:nth-child(2) { height: 50%; }
 .wk-cover-aq__signal i:nth-child(3) { height: 75%; }
 .wk-cover-aq__signal i:nth-child(4) { height: 100%; }
-.wk-cover-aq__title { font-weight: 900; font-size: clamp(40px, 7vw, 96px); line-height: .9; text-transform: uppercase; letter-spacing: -.02em; }
-.wk-cover-aq__title b { color: #19C3D6; font-weight: 900; }
-.wk-cover-aq__claim { margin-top: 12px; font-weight: 800; font-size: clamp(14px, 1.6vw, 20px); text-transform: uppercase; color: #BFF1F5; }
+.wk-cover-aq__title { font-weight: 500; font-size: clamp(40px, 7vw, 96px); line-height: .95; letter-spacing: -.03em; }
+.wk-cover-aq__title b { color: #19C3D6; font-weight: 500; }
+.wk-cover-aq__claim { margin-top: 12px; font-weight: 500; font-size: clamp(15px, 1.7vw, 22px); color: #BFF1F5; }
 @media (max-width: 760px) { .wk-cover-aq { aspect-ratio: 4 / 3; } }
 
 /* Portada de «A ras de mar»: piedra del paseo con la silueta pintada */
