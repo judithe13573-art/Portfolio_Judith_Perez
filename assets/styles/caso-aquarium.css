@@ -216,3 +216,14 @@ body.aq { background: var(--aq-foam); }
 @media (max-width: 900px) {
   .aq-hero::before { background: linear-gradient(180deg, rgba(6,27,63,.55) 0%, rgba(6,27,63,.75) 100%); }
 }
+
+/* ── Portada con la foto del paseo ── */
+.aq-aerial--photo { max-width: 620px; }
+.aq-aerial--photo img { display: block; width: 100%; height: auto; border-radius: 28px 20px 30px 22px; box-shadow: 0 30px 60px rgba(0,0,0,.4); rotate: 1.5deg; transition: rotate .5s ease; }
+.aq-aerial--photo:hover img { rotate: 0deg; }
+@media (prefers-reduced-motion: reduce) { .aq-aerial--photo img { transition: none; } }
+@media (max-width: 900px) { .aq-aerial--photo { max-width: 100%; } }
+@media (min-width: 901px) {
+  .aq-hero__grid:has(.aq-aerial--photo) { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); }
+  .aq-aerial--photo { max-width: none; }
+}
