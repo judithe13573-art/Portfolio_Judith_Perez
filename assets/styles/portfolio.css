@@ -915,3 +915,39 @@ body.pf--work { background: #EAE5DC; }
 
 .pf .wk-item, .pf .wk-item__meta span { color: #1A1A18; }
 .pf .wk-item__meta small { color: #7A756C; }
+
+/* Rejilla: proyecto a todo el ancho y portada de «A ras de mar» hecha con código */
+.wk-item--full { grid-column: 1 / -1; }
+.wk-cover-aq {
+  display: flex;
+  aspect-ratio: 21 / 8;
+  background:
+    radial-gradient(50% 80% at 85% 0%, rgba(25,195,214,.45), transparent 60%),
+    linear-gradient(180deg, #0E5AA7 0%, #0A2A5E 60%, #061B3F 100%);
+}
+.wk-cover-aq__inner { display: flex; flex-direction: column; justify-content: center; padding: clamp(20px, 4vw, 56px); color: #FFFFFF; font-family: 'Montserrat', var(--pf-sans); transition: scale .8s cubic-bezier(.2,.7,.2,1); }
+.wk-item:hover .wk-cover-aq__inner { scale: 1.03; }
+.wk-cover-aq__signal { display: inline-flex; align-items: flex-end; gap: 6px; height: 40px; color: #19C3D6; margin-bottom: 14px; }
+.wk-cover-aq__signal i { display: block; width: 11px; border: 3px solid currentColor; border-radius: 3px; }
+.wk-cover-aq__signal i:nth-child(1) { height: 25%; background: currentColor; }
+.wk-cover-aq__signal i:nth-child(2) { height: 50%; }
+.wk-cover-aq__signal i:nth-child(3) { height: 75%; }
+.wk-cover-aq__signal i:nth-child(4) { height: 100%; }
+.wk-cover-aq__title { font-weight: 900; font-size: clamp(40px, 7vw, 96px); line-height: .9; text-transform: uppercase; letter-spacing: -.02em; }
+.wk-cover-aq__title b { color: #19C3D6; font-weight: 900; }
+.wk-cover-aq__claim { margin-top: 12px; font-weight: 800; font-size: clamp(14px, 1.6vw, 20px); text-transform: uppercase; color: #BFF1F5; }
+@media (max-width: 760px) { .wk-cover-aq { aspect-ratio: 4 / 3; } }
+
+/* Portada de «A ras de mar»: piedra del paseo con la silueta pintada */
+.wk-cover-aq {
+  position: relative;
+  background-color: #EAE3D6;
+  background-image: linear-gradient(#D9D0BF 2px, transparent 2px), linear-gradient(90deg, #D9D0BF 2px, transparent 2px);
+  background-size: 44px 44px;
+}
+.wk-cover-aq::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 22%; background: linear-gradient(90deg, #0E5AA7, #0A2A5E); clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 10% 50%); }
+.wk-cover-aq__inner { position: relative; z-index: 1; color: #0A2A5E; }
+.wk-cover-aq__shark { width: min(420px, 60%); height: auto; margin-bottom: 14px; fill: rgba(14,90,167,.12); stroke: #0E5AA7; stroke-width: 5; stroke-dasharray: 14 9; stroke-linejoin: round; rotate: -6deg; }
+.wk-cover-aq__title { color: #0A2A5E; }
+.wk-cover-aq__title b { color: #0E5AA7; }
+.wk-cover-aq__claim { color: #0E5AA7; }

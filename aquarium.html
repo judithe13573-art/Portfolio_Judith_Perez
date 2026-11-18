@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A ras de mar · L'Aquàrium de Barcelona — Judith Pérez</title>
+  <meta name="description" content="A ras de mar: campaña experiencial conceptual para L'Aquàrium de Barcelona que convierte el paseo del Port Vell en la primera sala del acuario." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700&display=swap" />
+  <link rel="stylesheet" href="assets/styles/portfolio.css?v=20261118g" />
+  <link rel="stylesheet" href="assets/styles/caso-aquarium.css?v=20261118g" />
+</head>
+<body class="pf aq">
+
+  <!-- Silueta del tiburón: se dibuja una vez y se reutiliza en toda la página -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <path id="aq-shark" d="M8 62 C 60 44 140 34 214 38 C 226 22 240 10 254 4 C 252 18 252 30 258 40 C 300 44 338 50 372 56 C 392 42 410 30 428 22 C 420 40 418 54 422 66 C 418 80 422 94 432 112 C 410 100 390 88 372 74 C 330 80 286 84 246 84 C 240 96 232 106 220 114 C 220 102 214 92 206 84 C 140 82 70 78 8 62 Z" />
+    </defs>
+  </svg>
+
+  <!-- NAV DEL PORTFOLIO -->
+  <header class="pf-nav">
+    <div class="pf-nav__inner">
+      <a href="index.html" class="pf-nav__name"><span>Judith Pérez</span><em>Marketing &amp; identidad de marca</em></a>
+      <nav class="pf-nav__links" aria-label="Principal">
+        <a href="proyectos.html" class="pf-nav__link" aria-current="page">Proyectos</a>
+        <a href="sobre-mi.html" class="pf-nav__link">Sobre mí</a>
+        <a href="contacto.html" class="pf-nav__link pf-nav__link--accent">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pf-main aq-main">
+
+    <!-- 1. PORTADA: vista cenital del paseo -->
+    <section class="aq-hero">
+      <div class="aq-wrap aq-hero__grid">
+        <div class="aq-hero__text">
+          <a href="proyectos.html" class="aq-back">← Volver a proyectos</a>
+          <p class="aq-kicker">L'Aquàrium de Barcelona · Campaña experiencial</p>
+          <h1 class="aq-hero__title">A ras <span>de mar</span></h1>
+          <p class="aq-hero__lead">Convertir el paseo del Port Vell en la primera sala de L'Aquàrium. Quien camina junto al agua se encuentra una aleta dibujada en el suelo, sigue el contorno, descubre el animal entero y acaba preguntándose qué más hay bajo la superficie.</p>
+          <p class="aq-role"><strong>Propuesta conceptual, no encargada por L'Aquàrium.</strong> Mi papel: concepto creativo, copywriting, identidad de campaña y piezas.</p>
+          <ul class="aq-chips" aria-label="Disciplinas">
+            <li>Experiencia de marca</li>
+            <li>Concepto creativo</li>
+            <li>Copywriting</li>
+            <li>Exterior y vídeo</li>
+          </ul>
+        </div>
+
+        <figure class="aq-aerial" aria-label="Vista cenital del paseo: una silueta de tiburón pintada en azul en el pavimento, junto al agua, con el texto Acabes de trepitjar una aleta">
+          <svg viewBox="0 0 520 620" role="img" aria-labelledby="aq-aerial-title">
+            <title id="aq-aerial-title">Vista cenital del paseo del Port Vell con la silueta pintada</title>
+            <defs>
+              <pattern id="aq-tiles" width="40" height="40" patternUnits="userSpaceOnUse">
+                <rect width="40" height="40" fill="#EAE3D6" />
+                <path d="M0 0 H40 M0 0 V40" stroke="#D9D0BF" stroke-width="2" />
+              </pattern>
+              <linearGradient id="aq-water" x1="0" x2="1">
+                <stop offset="0" stop-color="#0E5AA7" />
+                <stop offset="1" stop-color="#0A2A5E" />
+              </linearGradient>
+            </defs>
+            <rect width="520" height="620" fill="url(#aq-tiles)" />
+            <!-- Agua del puerto a la derecha -->
+            <path d="M400 0 H520 V620 H420 C 404 520 416 420 404 320 C 394 220 412 110 400 0 Z" fill="url(#aq-water)" />
+            <path d="M400 0 C 412 110 394 220 404 320 C 416 420 404 520 420 620" fill="none" stroke="#FFFFFF" stroke-width="6" opacity=".55" />
+            <g fill="none" stroke="#BFF1F5" stroke-width="2" opacity=".5">
+              <path d="M440 80 q 12 -6 24 0 t 24 0" /><path d="M450 240 q 12 -6 24 0 t 24 0" /><path d="M436 420 q 12 -6 24 0 t 24 0" />
+            </g>
+            <!-- Silueta pintada en el suelo, en diagonal -->
+            <g transform="translate(40 150) rotate(62 216 60)">
+              <use href="#aq-shark" fill="rgba(14,90,167,.12)" stroke="#0E5AA7" stroke-width="5" stroke-dasharray="14 9" stroke-linejoin="round" />
+            </g>
+            <!-- Persona vista desde arriba -->
+            <g transform="translate(150 120)">
+              <ellipse cx="0" cy="0" rx="20" ry="13" fill="#2B2B28" opacity=".15" />
+              <circle cx="0" cy="-2" r="11" fill="#FF7A59" />
+              <circle cx="0" cy="-3" r="6" fill="#5A3A2A" />
+            </g>
+            <!-- Texto pintado en el suelo -->
+            <text x="70" y="560" font-family="Montserrat, sans-serif" font-weight="900" font-size="25" fill="#0A2A5E" transform="rotate(-8 70 560)">ACABES DE TREPITJAR</text>
+            <text x="70" y="592" font-family="Montserrat, sans-serif" font-weight="900" font-size="25" fill="#0E5AA7" transform="rotate(-8 70 560)">UNA ALETA.</text>
+          </svg>
+          <figcaption>Vista cenital del paseo · ilustración del concepto</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 2. LA IDEA -->
+    <section class="aq-section">
+      <div class="aq-wrap">
+        <header class="aq-intro">
+          <p class="aq-eyebrow">La idea creativa</p>
+          <h2 class="aq-h2">El mar empieza <span>en el paseo</span></h2>
+        </header>
+        <div class="aq-twocol">
+          <div class="aq-card">
+            <h3 class="aq-h3">El reto</h3>
+            <p>Despertar el interés de quienes ya están en el Port Vell y todavía no han decidido visitar L'Aquàrium.</p>
+          </div>
+          <div class="aq-card">
+            <h3 class="aq-h3">El insight</h3>
+            <p>Puedes pasar un buen rato paseando al lado del mar sin pensar en lo que hay debajo de la superficie.</p>
+          </div>
+        </div>
+        <p class="aq-statement-sm">La campaña cambia dónde miras tres veces: <strong>primero al suelo, después a tu propio cuerpo y, por último, al agua.</strong> Cada pieza provoca la acción siguiente, y el copy forma parte del recorrido.</p>
+      </div>
+    </section>
+
+    <!-- 3. EL RECORRIDO EN TRES MOMENTOS -->
+    <section class="aq-section aq-section--deep">
+      <div class="aq-wrap">
+        <header class="aq-intro">
+          <p class="aq-eyebrow aq-eyebrow--light">El recorrido</p>
+          <h2 class="aq-h2 aq-h2--light">Tres momentos, <span>tres miradas</span></h2>
+        </header>
+        <ol class="aq-steps">
+          <li class="aq-step">
+            <span class="aq-step__num" aria-hidden="true">1</span>
+            <p class="aq-step__label">La sorpresa · mira al suelo</p>
+            <p class="aq-step__copy" lang="ca">«Acabes de trepitjar una aleta.»</p>
+            <p class="aq-step__es">Acabas de pisar una aleta.</p>
+            <p>Una aleta azul cruza el camino. El contorno sigue unos pasos más allá, hasta revelar la silueta completa.</p>
+          </li>
+          <li class="aq-step">
+            <span class="aq-step__num" aria-hidden="true">2</span>
+            <p class="aq-step__label">La comparación · mírate a ti</p>
+            <p class="aq-step__copy" lang="ca">«Posa-t’hi al costat. A veure qui ocupa més.»</p>
+            <p class="aq-step__es">Ponte a su lado. A ver quién ocupa más.</p>
+            <p>Junto a otra silueta, una marca indica dónde colocarse para compararse con el animal. Una ficha breve revela la especie.</p>
+          </li>
+          <li class="aq-step">
+            <span class="aq-step__num" aria-hidden="true">3</span>
+            <p class="aq-step__label">La invitación · mira al agua</p>
+            <p class="aq-step__copy" lang="ca">«Ara mira l’aigua. Què hi deu haver a sota?»</p>
+            <p class="aq-step__es">Ahora mira el agua. ¿Qué habrá debajo?</p>
+            <p>La última intervención está junto al agua. Un plano indica cómo seguir hasta L'Aquàrium.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. EL MAPA -->
+    <section class="aq-section">
+      <div class="aq-wrap aq-split">
+        <div>
+          <p class="aq-eyebrow">Dónde pasa</p>
+          <h2 class="aq-h2">Del paseo <span>a la puerta</span></h2>
+          <p class="aq-p">Las tres intervenciones forman un camino por el Port Vell que termina en la entrada de L'Aquàrium. El lugar forma parte de la idea: la cercanía del agua da sentido al final del recorrido.</p>
+          <p class="aq-note">Las especies y sus medidas se validarían con L'Aquàrium, y las intervenciones en el pavimento se coordinarían con el Port de Barcelona, con pintura temporal.</p>
+        </div>
+        <figure class="aq-map" aria-label="Mapa esquemático del Port Vell con las tres intervenciones y el camino hasta L'Aquàrium">
+          <svg viewBox="0 0 520 400" role="img" aria-labelledby="aq-map-title">
+            <title id="aq-map-title">Mapa esquemático del recorrido</title>
+            <rect width="520" height="400" fill="#EAE3D6" />
+            <path d="M0 260 C 90 240 150 280 230 250 C 300 222 330 160 420 150 C 470 144 500 160 520 150 V400 H0 Z" fill="#0E5AA7" />
+            <path d="M300 300 L 420 280 L 440 330 L 320 352 Z" fill="#D9D0BF" />
+            <path d="M60 228 C 140 210 200 236 250 214 C 300 192 330 140 400 128" fill="none" stroke="#0A2A5E" stroke-width="3" stroke-dasharray="8 8" />
+            <path d="M400 128 C 420 170 380 230 370 300" fill="none" stroke="#0A2A5E" stroke-width="3" stroke-dasharray="8 8" />
+            <g font-family="Montserrat, sans-serif" font-weight="900" font-size="15" text-anchor="middle">
+              <g><circle cx="80" cy="224" r="16" fill="#19C3D6" /><text x="80" y="229" fill="#061B3F">1</text></g>
+              <g><circle cx="250" cy="214" r="16" fill="#19C3D6" /><text x="250" y="219" fill="#061B3F">2</text></g>
+              <g><circle cx="400" cy="128" r="16" fill="#19C3D6" /><text x="400" y="133" fill="#061B3F">3</text></g>
+            </g>
+            <g transform="translate(370 312)"><rect x="-26" y="-18" width="52" height="30" rx="8" fill="#0A2A5E" /><path d="M-12 -3 c 6 -6 18 -6 24 0 c -6 6 -18 6 -24 0 z" fill="#19C3D6" /></g>
+            <g font-family="Montserrat, sans-serif" font-weight="700" font-size="13" fill="#0A2A5E">
+              <text x="60" y="196">La sorpresa</text>
+              <text x="210" y="186">La comparación</text>
+              <text x="330" y="102">La invitación</text>
+              <text x="300" y="376" fill="#FFFFFF">L'Aquàrium</text>
+            </g>
+          </svg>
+          <figcaption>Mapa esquemático · no a escala</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 5. FUERA DEL PASEO: MUPI Y VÍDEO -->
+    <section class="aq-section aq-section--light">
+      <div class="aq-wrap">
+        <header class="aq-intro">
+          <p class="aq-eyebrow">Fuera del paseo</p>
+          <h2 class="aq-h2">Una pregunta <span>que el recorrido responde</span></h2>
+        </header>
+
+        <div class="aq-split aq-split--mupi">
+          <figure class="aq-mupi-stage" aria-label="Mupi con una aleta cortada por los bordes y el texto Aquí només hi cap l'aleta">
+            <div class="aq-mupi">
+              <svg class="aq-mupi__fin" viewBox="0 0 300 260" preserveAspectRatio="none" aria-hidden="true"><path d="M-10 270 C 70 196 150 96 262 -20 C 240 70 246 170 300 270 Z" fill="#0E5AA7" /></svg>
+              <p class="aq-mupi__title" lang="ca">Aquí només hi cap l’aleta.</p>
+              <p class="aq-mupi__foot" lang="ca">La resta t’espera al passeig del Port Vell ↓</p>
+              <p class="aq-mupi__brand">Arran de mar</p>
+            </div>
+          </figure>
+          <div>
+            <h3 class="aq-h3">El mupi</h3>
+            <p class="aq-step__copy aq-step__copy--dark" lang="ca">«Aquí només hi cap l’aleta.»</p>
+            <p class="aq-step__es aq-step__es--dark">Aquí solo cabe la aleta.</p>
+            <p class="aq-p">Cerca del paseo, un mupi muestra una aleta cortada por los bordes del cartel. Debajo, una indicación concreta para encontrar el resto del animal.</p>
+          </div>
+        </div>
+
+        <div class="aq-story">
+          <h3 class="aq-h3">El vídeo · storyboard</h3>
+          <p class="aq-p">Un plano a ras de suelo sigue a alguien que camina, se detiene y retrocede. La cámara se eleva hasta revelar la silueta completa junto a la persona.</p>
+          <figure class="aq-video">
+            <div class="aq-video__frame">
+              <video src="assets/video/a-ras-de-mar.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo: unos pies caminan por el paseo del Port Vell, se detienen sobre una aleta azul pintada en el suelo y la cámara sube para mostrar la silueta completa del tiburón"></video>
+              <p class="aq-video__over" lang="ca">Acabes de trepitjar <span>una aleta.</span></p>
+            </div>
+            <figcaption>Pieza de vídeo · prueba generada con IA (HeyGen) a partir del storyboard</figcaption>
+          </figure>
+          <ol class="aq-frames">
+            <li>
+              <svg viewBox="0 0 160 100" aria-hidden="true"><rect width="160" height="100" fill="#EAE3D6" /><path d="M0 70 H160" stroke="#D9D0BF" stroke-width="2" /><rect x="40" y="44" width="16" height="26" rx="6" fill="#2B2B28" /><rect x="64" y="50" width="16" height="20" rx="6" fill="#2B2B28" /><path d="M120 70 L 132 46 L 140 70 Z" fill="#0E5AA7" /></svg>
+              <span>1 · A ras de suelo, unos pies caminan.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 160 100" aria-hidden="true"><rect width="160" height="100" fill="#EAE3D6" /><path d="M0 70 H160" stroke="#D9D0BF" stroke-width="2" /><rect x="74" y="44" width="16" height="26" rx="6" fill="#2B2B28" /><rect x="92" y="44" width="16" height="26" rx="6" fill="#2B2B28" /><path d="M110 70 L 122 46 L 130 70 Z" fill="#0E5AA7" /></svg>
+              <span>2 · Se detienen justo sobre la aleta.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 160 100" aria-hidden="true"><rect width="160" height="100" fill="#EAE3D6" /><path d="M0 70 H160" stroke="#D9D0BF" stroke-width="2" /><rect x="40" y="44" width="16" height="26" rx="6" fill="#2B2B28" transform="rotate(-8 48 57)" /><rect x="60" y="48" width="16" height="22" rx="6" fill="#2B2B28" /><path d="M100 70 L 112 46 L 120 70 Z" fill="#0E5AA7" /><path d="M86 30 h -20 m 0 0 l 6 -5 m -6 5 l 6 5" fill="none" stroke="#0A2A5E" stroke-width="2" /></svg>
+              <span>3 · Retroceden para entender qué pisan.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 160 100" aria-hidden="true"><rect width="160" height="100" fill="#EAE3D6" /><use href="#aq-shark" transform="translate(6 26) scale(.32)" fill="rgba(14,90,167,.15)" stroke="#0E5AA7" stroke-width="7" /><circle cx="140" cy="40" r="7" fill="#FF7A59" /></svg>
+              <span>4 · La cámara sube: la silueta completa junto a la persona.</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. ESTRATEGIA -->
+    <section class="aq-section">
+      <div class="aq-wrap">
+        <header class="aq-intro">
+          <p class="aq-eyebrow">Estrategia</p>
+          <h2 class="aq-h2">A quién habla <span>y cómo lo mediría</span></h2>
+        </header>
+        <dl class="aq-brief">
+          <div><dt>Para quién</dt><dd>Quien pasea por el Port Vell, vecinos y visitantes, y todavía no ha decidido entrar en L'Aquàrium.</dd></div>
+          <div><dt>El objetivo</dt><dd>Que el paseo despierte la curiosidad y termine en la puerta de L'Aquàrium, y que el contenido lleve a otros a buscar el recorrido.</dd></div>
+          <div><dt>Cómo lo mediría</dt><dd>Entradas compradas con el código del mupi, visitas a taquilla durante la campaña, fotos compartidas con las siluetas y visualizaciones del vídeo.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 7. CIERRE -->
+    <section class="aq-closing">
+      <div class="aq-wrap">
+        <svg class="aq-closing__fin" viewBox="0 0 120 70" aria-hidden="true"><path d="M10 64 C 36 34 66 12 100 4 C 92 26 92 46 104 64 Z" fill="#0E5AA7" /></svg>
+        <p class="aq-closing__brand" lang="ca">Arran de mar</p>
+        <p class="aq-closing__quote">Un paseo por el Port Vell <span>que termina bajo el mar.</span></p>
+      </div>
+    </section>
+
+    <div class="aq-wrap aq-end">
+      <p class="aq-disclaimer">Proyecto conceptual: propuesta personal no encargada ni aprobada por L'Aquàrium de Barcelona. El nombre se usa solo para ilustrar el caso. Ilustraciones y maquetas de elaboración propia.</p>
+      <nav class="aq-end__nav" aria-label="Más proyectos">
+        <a href="proyectos.html" class="aq-back aq-back--dark">← Volver a proyectos</a>
+        <a href="contacto.html" class="aq-back aq-back--dark">¿Hablamos? →</a>
+      </nav>
+    </div>
+
+  </main>
+
+  <footer class="pf-footer">
+    <div class="pf-footer__inner">
+      <span>© 2026 Judith Pérez</span>
+      <span>Marketing · Identidad de marca · Storytelling</span>
+    </div>
+  </footer>
+
+</body>
+</html>
