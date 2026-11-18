@@ -846,3 +846,72 @@ body.pf--home {
 .pf .pf-nav__link--accent { background: #16402C; color: #F3EBDD; }
 .pf .pf-nav__link--accent:hover, .pf .pf-nav__link--accent[aria-current="page"] { background: #1E7A3E; color: #F3EBDD; }
 .pf .pf-nav__link:focus-visible { outline: 2px solid #1E7A3E; outline-offset: 2px; }
+
+/* ═══════════════════════════════════════════
+   Estilo «estudio»: rejilla de proyectos con imagen grande,
+   filtros en pastilla y datos pequeños debajo (página Proyectos)
+   ═══════════════════════════════════════════ */
+body.pf--work { background: #EAE5DC; }
+.wk { max-width: 1320px; margin: 0 auto; padding: 28px clamp(16px, 2vw, 24px) 80px; }
+.wk__title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+.wk-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.wk-filter {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 4px;
+  background: #D6D0C5;
+  color: #FFFFFF;
+  font-family: var(--pf-sans);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease;
+}
+.wk-filter:hover { background: #C3BCAF; }
+.wk-filter.is-active { background: #16402C; color: #FFFFFF; }
+.wk-filter:focus-visible { outline: 2px solid #16402C; outline-offset: 2px; }
+
+.wk-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 10px; align-items: start; }
+.wk-item { display: block; text-decoration: none; color: #1A1A18; }
+.wk-item[hidden] { display: none; }
+.wk-item--wide { grid-column: span 8; }
+.wk-item--tall { grid-column: span 4; }
+.wk-item__media { position: relative; display: block; overflow: hidden; background: #D6D0C5; }
+.wk-item__media img { display: block; width: 100%; height: auto; object-fit: cover; transition: scale .8s cubic-bezier(.2,.7,.2,1); }
+.wk-item--wide .wk-item__media img { aspect-ratio: 3 / 2; object-position: 40% 50%; }
+.wk-item--tall .wk-item__media img { aspect-ratio: 2 / 3; }
+.wk-item:hover .wk-item__media img { scale: 1.04; }
+
+/* Capa al pasar el cursor: etiquetas arriba y «Ver caso» en el centro */
+.wk-item__over {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(22,64,44,.42);
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+.wk-item:hover .wk-item__over, .wk-item:focus-visible .wk-item__over { opacity: 1; }
+.wk-item__tags { position: absolute; top: 14px; left: 14px; display: flex; flex-wrap: wrap; gap: 6px; }
+.wk-item__tags span { padding: 6px 10px; border-radius: 4px; background: rgba(255,255,255,.22); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); color: #FFFFFF; font-family: var(--pf-sans); font-size: 12px; font-weight: 700; }
+.wk-item__cta { color: #FFFFFF; font-family: var(--pf-sans); font-size: 15px; font-weight: 700; letter-spacing: .02em; }
+.wk-item:focus-visible { outline: 2px solid #16402C; outline-offset: 3px; }
+
+/* Datos pequeños debajo de cada imagen, en dos columnas */
+.wk-item__meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; padding: 10px 0 30px; max-width: 520px; }
+.wk-item__meta span { display: flex; flex-direction: column; font-family: var(--pf-sans); font-size: 13px; font-weight: 700; line-height: 1.35; }
+.wk-item__meta small { font-size: 12px; font-weight: 400; color: #7A756C; margin-bottom: 2px; }
+.wk-empty { padding: 40px 0; font-family: var(--pf-sans); color: #7A756C; }
+
+@media (max-width: 760px) {
+  .wk-item--wide, .wk-item--tall { grid-column: 1 / -1; }
+  .wk-item--tall .wk-item__media img { aspect-ratio: 4 / 5; }
+  .wk-item__over { opacity: 1; background: linear-gradient(to bottom, rgba(22,64,44,.35), transparent 40%); align-items: flex-end; justify-content: flex-start; }
+  .wk-item__cta { display: none; }
+}
+
+.pf .wk-item, .pf .wk-item__meta span { color: #1A1A18; }
+.pf .wk-item__meta small { color: #7A756C; }

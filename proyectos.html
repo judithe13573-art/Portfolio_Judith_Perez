@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyectos — Judith Pérez</title>
-  <meta name="description" content="Proyectos de Judith Pérez: estrategia de marca, concepto creativo, copywriting y contenido." />
+  <meta name="description" content="Proyectos de Judith Pérez: identidad visual, identidad verbal y estrategia de marca." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" />
-  <link rel="stylesheet" href="assets/styles/portfolio.css?v=20261112o" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" />
+  <link rel="stylesheet" href="assets/styles/portfolio.css?v=20261118c" />
 </head>
-<body class="pf pf--paper-warm">
+<body class="pf pf--work">
 
   <!-- NAV -->
   <header class="pf-nav">
@@ -26,31 +26,50 @@
 
   <main class="pf-main">
 
-    <!-- PROYECTOS -->
-    <section class="pf-projects">
-      <div class="pf-wrap">
-        <header class="pf-projects__header">
-          <p class="pf-eyebrow">Proyectos destacados</p>
-          <h1 class="pf-projects__title">Ideas contadas de principio a fin</h1>
-        </header>
+    <section class="wk" aria-labelledby="wk-title">
+      <h1 class="wk__title" id="wk-title">Proyectos</h1>
 
-        <div class="pf-grid" id="pf-grid">
-          <a href="libreria.html" class="pf-card" id="proyecto-01">
-            <span class="pf-media pf-media--card"><img class="pf-media__img" src="assets/images/libreria/fachada-acera.jpg" alt="Fachada verde botella de La Esquina, librería de barrio, en una esquina soleada con la puerta abierta y el escaparate lleno de libros" width="1400" height="933" loading="lazy" style="object-position: 38% 50%;" /></span>
-            <span class="pf-card__number">01</span>
-            <span class="pf-card__title">La Esquina · Librería de barrio</span>
-            <span class="pf-tag">Identidad visual · Identidad verbal · Packaging · Fidelización</span>
-            <span class="pf-card__more">Ver proyecto</span>
-          </a>
-          <a href="beanywood.html" class="pf-card" id="proyecto-02">
-            <span class="pf-media pf-media--card"><img class="pf-media__img pf-media__img--beany" src="assets/images/beanywood/creative-fuel-ilustracion.jpg" alt="Ilustración de Beany con sombrero trabajando en su portátil junto a una taza de café" width="1026" height="1451" loading="lazy" /></span>
-            <span class="pf-card__number">02</span>
-            <span class="pf-card__title">Beanywood Café · Creative Fuel</span>
-            <span class="pf-tag">Brand strategy · Concepto · Copy · Contenido</span>
-            <span class="pf-card__more">Ver proyecto</span>
-          </a>
-        </div>
+      <!-- Filtros por disciplina -->
+      <div class="wk-filters" role="group" aria-label="Filtrar proyectos">
+        <button type="button" class="wk-filter is-active" data-filter="todo" aria-pressed="true">Todo</button>
+        <button type="button" class="wk-filter" data-filter="identidad-visual" aria-pressed="false">Identidad visual</button>
+        <button type="button" class="wk-filter" data-filter="identidad-verbal" aria-pressed="false">Identidad verbal</button>
+        <button type="button" class="wk-filter" data-filter="estrategia" aria-pressed="false">Estrategia</button>
+        <button type="button" class="wk-filter" data-filter="packaging" aria-pressed="false">Packaging</button>
       </div>
+
+      <!-- Rejilla de proyectos: imagen grande y datos debajo -->
+      <div class="wk-grid">
+        <a href="libreria.html" class="wk-item wk-item--wide" id="proyecto-01" data-tags="identidad-visual identidad-verbal packaging estrategia">
+          <span class="wk-item__media">
+            <img src="assets/images/libreria/fachada-acera.jpg" alt="Fachada verde botella de La Esquina, librería de barrio, en una esquina soleada con la puerta abierta y el escaparate lleno de libros" width="1400" height="933" loading="lazy" />
+            <span class="wk-item__over" aria-hidden="true">
+              <span class="wk-item__tags"><span>Identidad visual</span><span>Identidad verbal</span><span>Packaging</span></span>
+              <span class="wk-item__cta">Ver caso</span>
+            </span>
+          </span>
+          <span class="wk-item__meta">
+            <span><small>Proyecto</small>La Esquina · Nos vemos en la esquina</span>
+            <span><small>Marca</small>Librería de barrio (conceptual)</span>
+          </span>
+        </a>
+
+        <a href="beanywood.html" class="wk-item wk-item--tall" id="proyecto-02" data-tags="estrategia identidad-verbal">
+          <span class="wk-item__media">
+            <img src="assets/images/beanywood/creative-fuel-ilustracion.jpg" alt="Ilustración de Beany con sombrero trabajando en su portátil junto a una taza de café" width="1026" height="1451" loading="lazy" />
+            <span class="wk-item__over" aria-hidden="true">
+              <span class="wk-item__tags"><span>Estrategia</span><span>Concepto</span><span>Copy</span></span>
+              <span class="wk-item__cta">Ver caso</span>
+            </span>
+          </span>
+          <span class="wk-item__meta">
+            <span><small>Proyecto</small>Creative Fuel</span>
+            <span><small>Marca</small>Beanywood Café</span>
+          </span>
+        </a>
+      </div>
+
+      <p class="wk-empty" hidden>No hay proyectos con este filtro todavía.</p>
     </section>
 
   </main>
@@ -63,44 +82,6 @@
     </div>
   </footer>
 
-  <!-- MODAL DE PROYECTO -->
-  <dialog class="pf-modal" id="pf-modal" aria-labelledby="pf-modal-title">
-    <div class="pf-modal__panel">
-      <div class="pf-modal__head">
-        <div>
-          <p class="pf-modal__number" data-field="number"></p>
-          <h2 class="pf-modal__title" id="pf-modal-title" data-field="title"></h2>
-          <p class="pf-tag" data-field="tag"></p>
-        </div>
-        <button type="button" class="pf-modal__close" data-close aria-label="Cerrar proyecto">×</button>
-      </div>
-      <div class="pf-media pf-media--wide">
-        <img class="pf-media__img pf-media__img--contain" data-field-img alt="" hidden />
-        <span class="pf-media__label" data-field-placeholder>Imagen del proyecto</span>
-      </div>
-      <div class="pf-modal__grid">
-        <div>
-          <h3 class="pf-modal__label">El reto</h3>
-          <p class="pf-modal__text" data-field="reto"></p>
-        </div>
-        <div>
-          <h3 class="pf-modal__label">La idea</h3>
-          <p class="pf-modal__text" data-field="idea"></p>
-        </div>
-        <div>
-          <h3 class="pf-modal__label">La voz</h3>
-          <p class="pf-modal__text" data-field="voz"></p>
-        </div>
-        <div>
-          <h3 class="pf-modal__label">El resultado</h3>
-          <p class="pf-modal__text" data-field="resultado"></p>
-        </div>
-      </div>
-      <div class="pf-gallery" data-field-gallery hidden></div>
-      <p class="pf-modal__note" data-field="nota"></p>
-    </div>
-  </dialog>
-
-  <script src="assets/js/portfolio.js?v=20261112o"></script>
+  <script src="assets/js/proyectos.js?v=20261118c"></script>
 </body>
 </html>
