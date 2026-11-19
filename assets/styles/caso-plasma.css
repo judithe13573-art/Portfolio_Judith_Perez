@@ -71,7 +71,9 @@ body.pl { background: #FFFFFF; }
 .pl-quote { margin-top: clamp(28px, 4vw, 44px) !important; max-width: 760px; padding-left: 20px; border-left: 3px solid var(--pl-red); font-size: clamp(19px, 2vw, 24px); font-weight: 500; line-height: 1.45; }
 
 /* 03 Carteles */
-.pl-posters { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 36px); }
+.pl-posters { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(20px, 3vw, 40px); max-width: 980px; margin: 0 auto; }
+.pl-posters .pl-poster__art { aspect-ratio: 1414 / 2000; }
+.pl-poster__photo { display: block; width: 100%; height: auto; border-radius: 36px; }
 .pl-poster { margin: 0; }
 .pl-poster__art { position: relative; display: flex; flex-direction: column; align-items: center; aspect-ratio: 4 / 5; padding: clamp(24px, 3.4vw, 40px) clamp(20px, 3vw, 36px) clamp(18px, 2.4vw, 26px); border-radius: 36px; overflow: hidden; background: radial-gradient(55% 45% at 50% 58%, rgba(242,201,76,.26) 0%, rgba(242,201,76,0) 70%), var(--pl-night); color: #FFFFFF; text-align: center; }
 .pl-poster__title { align-self: stretch; text-align: left; font-family: var(--pl-sans); font-size: clamp(28px, 3.4vw, 44px); font-weight: 700; line-height: 1; letter-spacing: -.02em; }
