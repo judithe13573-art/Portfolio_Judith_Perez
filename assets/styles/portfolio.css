@@ -951,3 +951,52 @@ body.pf--work { background: #EAE5DC; }
 .wk-cover-aq__title { color: #0A2A5E; }
 .wk-cover-aq__title b { color: #0E5AA7; }
 .wk-cover-aq__claim { color: #0E5AA7; }
+
+/* Portada de «A ras de mar»: piedra del paseo, silueta del tiburón y logo de la campaña (sin movimiento) */
+.wk-cover-aq { align-items: center; }
+.wk-cover-aq__inner { flex-direction: row; align-items: center; gap: clamp(20px, 4vw, 56px); width: 78%; }
+.wk-item:hover .wk-cover-aq__inner { scale: 1; }
+.wk-item__media .wk-cover-aq__logo { flex: none; width: clamp(150px, 24vw, 320px); height: auto; aspect-ratio: auto; transition: none; }
+.wk-item:hover .wk-cover-aq__logo { scale: 1; }
+.wk-cover-aq__side { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.wk-cover-aq__side .wk-cover-aq__shark { width: 100%; max-width: 380px; margin: 0; }
+.wk-cover-aq__claim { margin-top: 0; }
+@media (max-width: 760px) { .wk-cover-aq__inner { flex-direction: column; align-items: flex-start; width: 80%; padding-top: 56px; } .wk-item__media .wk-cover-aq__logo { width: min(70%, 240px); } }
+@media (max-width: 760px) { .wk-cover-aq { aspect-ratio: auto; } .wk-cover-aq__inner { padding-top: 64px; padding-bottom: 28px; gap: 18px; } .wk-cover-aq__side .wk-cover-aq__shark { max-width: 220px; } }
+/* Portada de «A ras de mar» con un cartel propio a sangre (sin movimiento) */
+.wk-cover-aq::after { display: none; }
+.wk-cover-aq .wk-cover-aq__inner { flex: 1 1 auto; flex-direction: column; align-items: flex-start; justify-content: center; gap: 16px; width: auto; padding: clamp(20px, 4vw, 56px); }
+.wk-cover-aq__poster { position: relative; z-index: 1; flex: none; align-self: stretch; aspect-ratio: 1122 / 1402; height: 100%; overflow: hidden; }
+.wk-item__media .wk-cover-aq__poster img { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; }
+.wk-item:hover .wk-cover-aq__poster img { scale: 1; }
+@media (max-width: 760px) {
+  .wk-cover-aq { aspect-ratio: auto; flex-direction: row; align-items: stretch; }
+  .wk-cover-aq .wk-cover-aq__inner { padding: 60px 16px 20px 18px; gap: 12px; }
+  .wk-item__media .wk-cover-aq__logo { width: 100%; max-width: 200px; }
+  .wk-cover-aq__claim { font-size: 14px; }
+  .wk-cover-aq__poster { width: 46%; height: auto; }
+}
+/* Portada de «A ras de mar»: solo la foto del tiburón */
+.wk-cover-aq--foto { display: block; background: #0A3096; }
+.wk-cover-aq--foto::after { display: none; }
+.wk-item__media.wk-cover-aq--foto img { width: 100%; height: 100%; aspect-ratio: 21 / 8; object-fit: cover; object-position: 50% 45%; }
+@media (max-width: 760px) { .wk-cover-aq--foto { aspect-ratio: 4 / 3; } .wk-item__media.wk-cover-aq--foto img { aspect-ratio: 4 / 3; object-position: 55% 45%; } }
+/* Portada: logo de la campaña y de L'Aquàrium sobre la foto, con la imagen oscurecida a la izquierda */
+.wk-cover-aq--foto::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(3,15,48,.82) 0%, rgba(3,15,48,.55) 35%, rgba(3,15,48,.1) 65%, rgba(3,15,48,0) 100%); pointer-events: none; }
+.wk-item__media.wk-cover-aq--foto .wk-cover-aq__marca { position: absolute; z-index: 2; left: clamp(20px, 5vw, 64px); top: 50%; translate: 0 -50%; width: clamp(150px, 24vw, 330px); height: auto; aspect-ratio: auto; object-fit: contain; filter: drop-shadow(0 4px 18px rgba(0,0,0,.45)); }
+.wk-item:hover .wk-item__media img.wk-cover-aq__marca { scale: 1; }
+.wk-cover-aq--foto .wk-item__over { z-index: 3; }
+@media (max-width: 760px) { .wk-cover-aq--foto::before { background: linear-gradient(90deg, rgba(3,15,48,.85) 0%, rgba(3,15,48,.5) 50%, rgba(3,15,48,.1) 100%); } .wk-item__media.wk-cover-aq--foto .wk-cover-aq__marca { width: 44%; left: 18px; top: 56%; } }
+/* El tiburón se desplaza a la derecha para dejar sitio limpio al logo */
+.wk-cover-aq--foto { background: #030F30; }
+.wk-item__media.wk-cover-aq--foto > img:first-child { position: absolute; top: 0; right: 0; width: 76%; height: 100%; aspect-ratio: auto; object-position: 40% 45%; }
+.wk-cover-aq--foto { aspect-ratio: 21 / 8; }
+.wk-cover-aq--foto::before { background: linear-gradient(90deg, #030F30 0%, #030F30 24%, rgba(3,15,48,.55) 38%, rgba(3,15,48,0) 60%); }
+.wk-item__media.wk-cover-aq--foto .wk-cover-aq__marca { width: clamp(150px, 25vw, 340px); left: clamp(22px, 4.5vw, 64px); }
+@media (max-width: 760px) { .wk-cover-aq--foto { aspect-ratio: 4 / 3; } .wk-item__media.wk-cover-aq--foto > img:first-child { width: 100%; object-position: 70% 45%; } .wk-cover-aq--foto::before { background: linear-gradient(90deg, rgba(3,15,48,.92) 0%, rgba(3,15,48,.6) 50%, rgba(3,15,48,.05) 100%); } .wk-item__media.wk-cover-aq--foto .wk-cover-aq__marca { width: 46%; left: 18px; top: 58%; } }
+/* Marca de la portada: nombre de la campaña y logo de L'Aquàrium, separados para que los dos se lean bien */
+.wk-item__media.wk-cover-aq--foto .wk-cover-aq__marca { display: flex; flex-direction: column; align-items: center; gap: clamp(12px, 1.6vw, 22px); width: clamp(160px, 24vw, 320px); filter: drop-shadow(0 4px 18px rgba(0,0,0,.5)); }
+.wk-item__media.wk-cover-aq--foto .wk-cover-aq__marca img { position: static; display: block; width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; }
+.wk-item__media.wk-cover-aq--foto .wk-cover-aq__marca img + img { width: 44%; }
+.wk-item:hover .wk-item__media .wk-cover-aq__marca img { scale: 1; }
+@media (max-width: 760px) { .wk-item__media.wk-cover-aq--foto .wk-cover-aq__marca { width: 46%; gap: 10px; } .wk-item__media.wk-cover-aq--foto .wk-cover-aq__marca img + img { width: 52%; } }
