@@ -8,8 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Lato:ital,wght@0,400;0,700;1,400&family=Outfit:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <link rel="stylesheet" href="assets/styles/portfolio.css?v=20261118i" />
-  <link rel="stylesheet" href="assets/styles/caso-aquarium.css?v=20261118n" />
+  <link rel="stylesheet" href="assets/styles/caso-aquarium.css?v=20261119k" />
 </head>
 <body class="pf aq">
 
@@ -42,7 +43,7 @@
         <div class="aq-hero__text">
           <a href="proyectos.html" class="aq-back">← Volver a proyectos</a>
           <p class="aq-kicker">L'Aquàrium de Barcelona · Campaña experiencial</p>
-          <h1 class="aq-hero__title">A ras <span>de mar</span></h1>
+          <h1 class="aq-hero__title aq-hero__title--logo"><img src="assets/images/aquarium/logo-arran-claro.webp" width="1226" height="732" alt="Arran de mar · A ras de mar, L'Aquàrium de Barcelona" /></h1>
           <p class="aq-hero__lead">Una campaña experiencial que convierte el paseo por el Port Vell en la primera sala de L'Aquàrium. Pisas una forma azul, bajas la mirada y descubres que estás sobre la aleta de un tiburón.</p>
           <p class="aq-role"><strong>Propuesta conceptual, no encargada por L'Aquàrium.</strong> Mi papel: el recorrido, los mensajes en catalán, el reparto de la revelación entre mupi, pavimento y vídeo, y la dirección visual de la serie.</p>
           <ul class="aq-chips" aria-label="Disciplinas">
@@ -133,28 +134,15 @@
           <p class="aq-p">Tres paradas por el Port Vell, siempre junto al agua. El camino termina en la entrada de L'Aquàrium.</p>
           <p class="aq-note">Las especies y sus medidas se validarían con L'Aquàrium, y las intervenciones en el pavimento se coordinarían con el Port de Barcelona, con pintura temporal.</p>
         </div>
-        <figure class="aq-map" aria-label="Mapa esquemático del Port Vell con las tres intervenciones y el camino hasta L'Aquàrium">
-          <svg viewBox="0 0 520 400" role="img" aria-labelledby="aq-map-title">
-            <title id="aq-map-title">Mapa esquemático del recorrido</title>
-            <rect width="520" height="400" fill="#EAE3D6" />
-            <path d="M0 260 C 90 240 150 280 230 250 C 300 222 330 160 420 150 C 470 144 500 160 520 150 V400 H0 Z" fill="#0E5AA7" />
-            <path d="M300 300 L 420 280 L 440 330 L 320 352 Z" fill="#D9D0BF" />
-            <path d="M60 228 C 140 210 200 236 250 214 C 300 192 330 140 400 128" fill="none" stroke="#0A2A5E" stroke-width="3" stroke-dasharray="8 8" />
-            <path d="M400 128 C 420 170 380 230 370 300" fill="none" stroke="#0A2A5E" stroke-width="3" stroke-dasharray="8 8" />
-            <g font-family="arboria, Outfit, sans-serif" font-weight="700" font-size="15" text-anchor="middle">
-              <g><circle cx="80" cy="224" r="16" fill="#19C3D6" /><text x="80" y="229" fill="#061B3F">1</text></g>
-              <g><circle cx="250" cy="214" r="16" fill="#19C3D6" /><text x="250" y="219" fill="#061B3F">2</text></g>
-              <g><circle cx="400" cy="128" r="16" fill="#19C3D6" /><text x="400" y="133" fill="#061B3F">3</text></g>
-            </g>
-            <g transform="translate(370 312)"><rect x="-26" y="-18" width="52" height="30" rx="8" fill="#0A2A5E" /><path d="M-12 -3 c 6 -6 18 -6 24 0 c -6 6 -18 6 -24 0 z" fill="#19C3D6" /></g>
-            <g font-family="arboria, Outfit, sans-serif" font-weight="500" font-size="13" fill="#0A2A5E">
-              <text x="60" y="196">Te detienes</text>
-              <text x="210" y="186">Te comparas</text>
-              <text x="320" y="102">Miras al agua</text>
-              <text x="300" y="376" fill="#FFFFFF">L'Aquàrium</text>
-            </g>
-          </svg>
-          <figcaption>Mapa esquemático · no a escala</figcaption>
+        <figure class="aq-map aq-map--real">
+          <div id="aq-mapa" class="aq-map__canvas" role="img" aria-label="Mapa del Port Vell de Barcelona con el recorrido: Moll de la Fusta, Portal de la Pau, Rambla de Mar y L'Aquàrium en el Moll d'Espanya"></div>
+          <ol class="aq-map__legend">
+            <li><span>1</span> Te detienes · Moll de la Fusta</li>
+            <li><span>2</span> Te comparas · Portal de la Pau</li>
+            <li><span>3</span> Miras al agua · Rambla de Mar</li>
+            <li><span class="is-end">●</span> L'Aquàrium · Moll d'Espanya</li>
+          </ol>
+          <figcaption>Recorrido propuesto por el Port Vell · mapa © OpenStreetMap</figcaption>
         </figure>
       </div>
     </section>
@@ -190,21 +178,29 @@
             <figcaption>Pieza de vídeo · simulación creada con IA (HeyGen) a partir del storyboard</figcaption>
           </figure>
           <ol class="aq-frames">
-            <li>
-              <svg viewBox="0 0 160 100" aria-hidden="true"><rect width="160" height="100" fill="#EAE3D6" /><path d="M0 70 H160" stroke="#D9D0BF" stroke-width="2" /><rect x="40" y="44" width="16" height="26" rx="6" fill="#2B2B28" /><rect x="64" y="50" width="16" height="20" rx="6" fill="#2B2B28" /><path d="M120 70 L 132 46 L 140 70 Z" fill="#0E5AA7" /></svg>
-              <span>1 · A ras de suelo, unos pies caminan.</span>
+            <li class="aq-frame">
+              <span class="aq-frame__tc">00:00</span>
+              <div class="aq-frame__shot"><img src="assets/images/aquarium/story-1.jpg" width="1260" height="720" loading="lazy" alt="Fotograma del vídeo: unas zapatillas blancas caminan por el paseo del puerto" /></div>
+              <p class="aq-frame__plan">Plano detalle · a ras de suelo</p>
+              <p class="aq-frame__txt">Unos pies caminan por el paseo.</p>
             </li>
-            <li>
-              <svg viewBox="0 0 160 100" aria-hidden="true"><rect width="160" height="100" fill="#EAE3D6" /><path d="M0 70 H160" stroke="#D9D0BF" stroke-width="2" /><rect x="74" y="44" width="16" height="26" rx="6" fill="#2B2B28" /><rect x="92" y="44" width="16" height="26" rx="6" fill="#2B2B28" /><path d="M110 70 L 122 46 L 130 70 Z" fill="#0E5AA7" /></svg>
-              <span>2 · Se detienen justo sobre la aleta.</span>
+            <li class="aq-frame">
+              <span class="aq-frame__tc">00:03</span>
+              <div class="aq-frame__shot"><img src="assets/images/aquarium/story-2.jpg" width="1260" height="720" loading="lazy" alt="Fotograma del vídeo: los pies pisan una línea azul pintada en el suelo" /></div>
+              <p class="aq-frame__plan">Plano detalle</p>
+              <p class="aq-frame__txt">Una línea azul cruza el camino.</p>
             </li>
-            <li>
-              <svg viewBox="0 0 160 100" aria-hidden="true"><rect width="160" height="100" fill="#EAE3D6" /><path d="M0 70 H160" stroke="#D9D0BF" stroke-width="2" /><rect x="40" y="44" width="16" height="26" rx="6" fill="#2B2B28" transform="rotate(-8 48 57)" /><rect x="60" y="48" width="16" height="22" rx="6" fill="#2B2B28" /><path d="M100 70 L 112 46 L 120 70 Z" fill="#0E5AA7" /><path d="M86 30 h -20 m 0 0 l 6 -5 m -6 5 l 6 5" fill="none" stroke="#0A2A5E" stroke-width="2" /></svg>
-              <span>3 · Retroceden para entender qué pisan.</span>
+            <li class="aq-frame">
+              <span class="aq-frame__tc">00:05</span>
+              <div class="aq-frame__shot"><img src="assets/images/aquarium/story-3.jpg" width="1260" height="720" loading="lazy" alt="Fotograma del vídeo: la persona se detiene sobre el contorno azul" /></div>
+              <p class="aq-frame__plan">Plano medio</p>
+              <p class="aq-frame__txt">Se detienen sobre la silueta.</p>
             </li>
-            <li>
-              <svg viewBox="0 0 160 100" aria-hidden="true"><rect width="160" height="100" fill="#EAE3D6" /><use href="#aq-shark" transform="translate(6 26) scale(.32)" fill="rgba(14,90,167,.15)" stroke="#0E5AA7" stroke-width="7" /><circle cx="140" cy="40" r="7" fill="#FF7A59" /></svg>
-              <span>4 · La cámara sube: la silueta completa junto a la persona.</span>
+            <li class="aq-frame">
+              <span class="aq-frame__tc">00:08</span>
+              <div class="aq-frame__shot"><img src="assets/images/aquarium/story-4.jpg" width="1260" height="720" loading="lazy" alt="Fotograma del vídeo: vista desde arriba del paseo con la silueta completa del tiburón y la persona a su lado" /></div>
+              <p class="aq-frame__plan">Plano cenital · la cámara sube</p>
+              <p class="aq-frame__txt">El tiburón entero, junto a la persona.</p>
             </li>
           </ol>
         </div>
@@ -213,7 +209,7 @@
 
     <!-- 5b. SERIE DE CARTELES -->
     <section class="aq-series">
-      <svg class="aq-series__wave aq-series__wave--top" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H1440 V38 C 1200 82 960 6 720 40 C 480 74 240 10 0 46 Z" fill="#FFFFFF" /></svg>
+      <svg class="aq-series__wave aq-series__wave--top" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H1440 V38 C 1200 82 960 6 720 40 C 480 74 240 10 0 46 Z" fill="#F8F8ED" /></svg>
       <div class="aq-wrap">
         <header class="aq-intro aq-series__intro">
           <p class="aq-eyebrow aq-eyebrow--light">La serie</p>
@@ -243,7 +239,7 @@
           </li>
         </ul>
       </div>
-      <svg class="aq-series__wave aq-series__wave--bottom" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80 H1440 V30 C 1180 -4 940 70 700 36 C 460 2 220 64 0 28 Z" fill="#F6F3EC" /></svg>
+      <svg class="aq-series__wave aq-series__wave--bottom" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80 H1440 V30 C 1180 -4 940 70 700 36 C 460 2 220 64 0 28 Z" fill="#F8F8ED" /></svg>
     </section>
 
     <!-- 6. ESTRATEGIA -->
@@ -265,15 +261,14 @@
     <!-- 7. CIERRE -->
     <section class="aq-closing">
       <div class="aq-wrap">
-        <svg class="aq-closing__fin" viewBox="0 0 120 70" aria-hidden="true"><path d="M10 64 C 36 34 66 12 100 4 C 92 26 92 46 104 64 Z" fill="#0E5AA7" /></svg>
-        <p class="aq-closing__brand" lang="ca">Arran de mar</p>
+        <img class="aq-closing__logo" src="assets/images/aquarium/logo-arran-azul.webp" width="1236" height="730" alt="Logotipo de la campaña Arran de mar con L'Aquàrium de Barcelona" loading="lazy" />
         <p class="aq-closing__quote">Un paseo por el Port Vell <span>que termina bajo el mar.</span></p>
         <p class="aq-closing__note">«Arran de mar» firma las piezas en catalán. El descubrimiento empieza en el suelo que ya estás pisando.</p>
       </div>
     </section>
 
     <div class="aq-wrap aq-end">
-      <p class="aq-disclaimer">Proyecto conceptual: propuesta personal no encargada ni aprobada por L'Aquàrium de Barcelona. El nombre y el logotipo se usan solo para ilustrar el caso. Las fotografías de los carteles y el vídeo de peces de la portada son propios; el mapa y el storyboard son ilustraciones propias. La foto del paseo y el vídeo del recorrido son simulaciones creadas con IA para mostrar cómo quedaría la campaña.</p>
+      <p class="aq-disclaimer">Proyecto conceptual: propuesta personal no encargada ni aprobada por L'Aquàrium de Barcelona. El nombre y el logotipo se usan solo para ilustrar el caso. Las fotografías de los carteles y el vídeo de peces de la portada son propios, y el mapa es de OpenStreetMap. La foto del paseo, el vídeo del recorrido y sus fotogramas son simulaciones creadas con IA para mostrar cómo quedaría la campaña.</p>
       <nav class="aq-end__nav" aria-label="Más proyectos">
         <a href="proyectos.html" class="aq-back aq-back--dark">← Volver a proyectos</a>
         <a href="contacto.html" class="aq-back aq-back--dark">¿Hablamos? →</a>
@@ -289,5 +284,8 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="assets/js/aquarium-mapa.js?v=20261119e"></script>
+  <script src="assets/js/aquarium-anim.js?v=20261119b"></script>
 </body>
 </html>
