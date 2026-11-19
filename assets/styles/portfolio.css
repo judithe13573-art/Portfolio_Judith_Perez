@@ -1008,3 +1008,19 @@ body.pf--work { background: #EAE5DC; }
   .wk-item--tall .wk-item__media { flex: 1 1 auto; min-height: 0; }
   .wk-item--tall .wk-item__media img { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; object-position: 50% 50%; }
 }
+
+/* Portada «Això també es dona»: bolsa y vial sobre negro, titular a la izquierda */
+.wk-cover-pl { display: flex; align-items: center; justify-content: space-between; gap: 4%; aspect-ratio: 21 / 8; padding: 0 9% 0 clamp(22px, 4.5vw, 64px); background: radial-gradient(45% 80% at 72% 55%, rgba(242,201,76,.28) 0%, rgba(242,201,76,0) 70%), #141414; }
+.wk-cover-pl__text { display: flex; flex-direction: column; align-items: flex-start; gap: clamp(14px, 2vw, 24px); }
+.wk-cover-pl__text b { color: #FFFFFF; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-weight: 900; font-size: clamp(28px, 4.4vw, 60px); line-height: .95; letter-spacing: -.03em; }
+.wk-item__media.wk-cover-pl .wk-cover-pl__text img { width: auto; height: clamp(22px, 2.4vw, 32px); aspect-ratio: auto; padding: 6px 12px; box-sizing: content-box; border-radius: 9999px; background: #FFFFFF; transition: none; }
+.wk-cover-pl__objs { display: flex; align-items: flex-end; gap: clamp(10px, 2vw, 28px); height: 78%; }
+.wk-item__media.wk-cover-pl .wk-cover-pl__objs img { width: auto; height: 100%; aspect-ratio: auto; filter: drop-shadow(0 20px 26px rgba(0,0,0,.6)); }
+.wk-item__media.wk-cover-pl .wk-cover-pl__objs img + img { height: 82%; }
+.wk-item:hover .wk-item__media.wk-cover-pl img { scale: 1; }
+@media (max-width: 760px) {
+  .wk-cover-pl { flex-direction: column; justify-content: flex-end; align-items: flex-start; aspect-ratio: 4 / 3; padding: 64px 22px 22px; }
+  .wk-cover-pl__objs { position: absolute; right: 22px; top: 60px; height: 46%; }
+  .wk-cover-pl__text b { font-size: 28px; }
+  .wk-cover-pl__text { position: relative; z-index: 1; }
+}
