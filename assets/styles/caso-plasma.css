@@ -96,11 +96,16 @@ body.pl { background: #FFFFFF; }
 .pl-list li::before { content: ""; position: absolute; left: 0; top: .8em; width: 20px; height: 2px; background: var(--pl-red); }
 .pl-list b { color: var(--pl-ink); }
 .pl-swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.pl-swatch { display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; aspect-ratio: 3 / 4; padding: 16px; border-radius: 30px; font-size: 13px; }
-.pl-swatch b { font-size: 16px; }
-.pl-swatch--dark { background: var(--pl-night); color: #FFFFFF; }
-.pl-swatch--plasma { background: var(--pl-plasma); color: var(--pl-ink); }
-.pl-swatch--red { background: var(--pl-red); color: #FFFFFF; }
+.pl-swatch { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.pl-bag { position: relative; display: block; width: min(100%, 140px); aspect-ratio: 514 / 1370; overflow: hidden; border-radius: 24px; background: #1E0408; box-shadow: 0 14px 24px -12px rgba(0,0,0,.45); }
+.pl-bag img { position: absolute; top: 0; right: 0; width: 275%; max-width: none; height: auto; margin-top: -74%; }
+.pl-bag::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #1E0408 6%, rgba(30,4,8,0) 24%); pointer-events: none; }
+.pl-swatch:nth-child(3) .pl-bag::after { background: linear-gradient(90deg, #0B0B0B 6%, rgba(11,11,11,0) 24%); }
+.pl-swatch:nth-child(3) .pl-bag { background: #0B0B0B; }
+.pl-swatch:nth-child(2) .pl-bag img { filter: hue-rotate(-50deg) saturate(1.9) brightness(.62) contrast(1.15); }
+.pl-swatch:nth-child(3) .pl-bag img { filter: grayscale(1) brightness(.42) contrast(1.45); }
+.pl-swatch figcaption { display: flex; flex-direction: column; gap: 2px; font-size: 13px; color: var(--pl-text); }
+.pl-swatch b { color: var(--pl-ink); font-size: 16px; }
 .pl-marker { grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; padding: 14px 20px; border-radius: 9999px; background: var(--pl-night); color: #FFFFFF; font-size: 15px; font-weight: 500; }
 
 /* 05 Ficha */
