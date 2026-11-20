@@ -109,7 +109,7 @@ body.pl { background: #FFFFFF; }
 .pl-marker { grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; padding: 14px 20px; border-radius: 9999px; background: var(--pl-night); color: #FFFFFF; font-size: 15px; font-weight: 500; }
 
 /* 05 Ficha */
-.pl-brief { margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.pl-brief { margin: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
 .pl-brief div { padding: 24px; border-radius: 30px; background: var(--pl-grey); }
 .pl-brief dt { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 9999px; background: var(--pl-grey-2); color: #FFFFFF; font-size: 12px; font-weight: 700; }
 .pl-brief dd { margin: 0; color: var(--pl-ink); font-size: 16px; line-height: 1.5; font-weight: 500; }
@@ -142,3 +142,68 @@ body.pl { background: #FFFFFF; }
   .pl-brief { grid-template-columns: 1fr; }
   .pl-logos { flex-direction: column; border-radius: 30px; }
 }
+
+/* Portada: la imagen de campaña a todo lo ancho, sin fondo negro */
+.pl-hero--foto { padding: 0 0 clamp(40px, 6vw, 72px); background: #FFFFFF; color: var(--pl-ink); border-bottom: 1px solid var(--pl-grey); }
+.pl-hero__key { margin: 0; }
+.pl-hero__key img { display: block; width: 100%; height: auto; }
+.pl-hero--foto .pl-hero__grid { grid-template-columns: 1fr 1.2fr; align-items: end; margin-top: clamp(28px, 4vw, 48px); }
+.pl-hero--foto .pl-back { margin-bottom: clamp(20px, 3vw, 32px); color: var(--pl-grey-2); }
+.pl-hero--foto .pl-back:hover { color: var(--pl-ink); }
+.pl-hero--foto .pl-kicker { margin-bottom: 14px !important; }
+.pl-hero--foto .pl-title__es { margin-top: 0 !important; color: var(--pl-ink); font-size: clamp(22px, 2.4vw, 30px); font-style: normal; font-weight: 700; }
+.pl-hero--foto .pl-title__es span { color: var(--pl-red); }
+.pl-hero--foto .pl-lead { margin-top: 0 !important; color: var(--pl-grey-2); }
+.pl-hero--foto .pl-tags li { border-color: rgba(10,10,10,.2); color: var(--pl-ink); }
+@media (max-width: 900px) { .pl-hero--foto .pl-hero__grid { grid-template-columns: 1fr; gap: 20px; } }
+
+/* Animaciones al bajar (solo si la persona no ha pedido reducir movimiento) */
+.pl-hero__key img { animation: pl-key 1.6s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes pl-key { from { opacity: 0; transform: scale(1.04); } to { opacity: 1; transform: none; } }
+.pl-anim .pl-rv { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
+.pl-anim .pl-rv.is-in { opacity: 1; transform: none; }
+.pl-anim .pl-poster.pl-rv { transform: translateY(40px) scale(.97); }
+.pl-anim .pl-poster.pl-rv.is-in { transform: none; }
+/* Las bolsas de la paleta se llenan de abajo arriba */
+.pl-anim .pl-swatch .pl-bag img { clip-path: inset(100% 0 0 0); transition: clip-path 1.4s cubic-bezier(.3,.6,.2,1); transition-delay: calc(var(--d, 0s) + .25s); }
+.pl-anim .pl-swatch.is-in .pl-bag img { clip-path: inset(0 0 0 0); }
+.pl-anim .pl-closing__sign.pl-rv { transform: translateY(20px) scale(.94); transition-duration: 1s; }
+.pl-anim .pl-closing__sign.pl-rv.is-in { transform: none; }
+/* Los carteles se levantan un poco al pasar el ratón */
+.pl-poster__photo { transition: transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s ease; }
+@media (hover: hover) { .pl-poster:hover .pl-poster__photo { transform: translateY(-6px); box-shadow: 0 24px 40px -24px rgba(0,0,0,.5); } }
+@media (prefers-reduced-motion: reduce) {
+  .pl-hero__key img { animation: none; }
+  .pl-anim .pl-rv, .pl-anim .pl-swatch .pl-bag img { opacity: 1; transform: none; clip-path: none; transition: none; }
+  .pl-poster__photo { transition: none; }
+}
+
+/* Transiciones suaves entre secciones: sin líneas ni cortes rectos */
+.pl-hero--foto { border-bottom: 0; }
+.pl-section--dark, .pl-closing { margin-inline: clamp(10px, 2vw, 24px); border-radius: clamp(28px, 4vw, 56px); }
+.pl-section--grey { background: linear-gradient(180deg, #FFFFFF 0%, var(--pl-grey) 18%, var(--pl-grey) 82%, #FFFFFF 100%); }
+.pl-section--dark { background: radial-gradient(70% 60% at 50% 0%, rgba(242,201,76,.10) 0%, rgba(242,201,76,0) 70%), var(--pl-night); }
+.pl-closing { background: radial-gradient(80% 90% at 50% 0%, #C22036 0%, var(--pl-red) 60%); }
+.pl-disclaimer { border-bottom: 0; }
+
+/* Carteles agrupados por línea de campaña */
+.pl-line + .pl-line { margin-top: clamp(56px, 7vw, 96px); }
+.pl-line__head { max-width: 980px; margin: 0 auto clamp(24px, 3vw, 36px); display: grid; grid-template-columns: auto 1fr; column-gap: clamp(16px, 2.4vw, 32px); align-items: center; }
+.pl-line__tag { grid-row: 1 / span 2; align-self: start; padding: 7px 14px; border-radius: 9999px; background: var(--pl-ink); color: var(--pl-yellow); font-size: 13px; font-weight: 700; white-space: nowrap; }
+.pl-line + .pl-line .pl-line__tag { background: var(--pl-red); color: #FFFFFF; }
+.pl-line__title { margin: 0; font-family: var(--pl-sans); font-weight: 700; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.1; color: var(--pl-ink); }
+.pl-line__text { margin: 8px 0 0; max-width: 620px; color: var(--pl-grey-2); font-size: 16px; line-height: 1.55; }
+@media (max-width: 600px) { .pl-line__head { grid-template-columns: 1fr; } .pl-line__tag { grid-row: auto; justify-self: start; margin-bottom: 12px; } }
+
+/* Traducción al castellano: en cursiva y más pequeña, debajo del texto en catalán */
+.pl-tr { display: block; margin: 6px 0 0; font-family: var(--pl-sans); font-style: italic; font-weight: 400; font-size: 14px; line-height: 1.4; letter-spacing: 0; color: var(--pl-grey-2); }
+.pl-section--dark .pl-tr { color: rgba(255,255,255,.65); }
+.pl-turn .pl-tr { margin: -6px 0 14px; }
+.pl-hero--foto .pl-title__es .pl-tr { font-size: 16px; font-weight: 400; color: var(--pl-grey-2); }
+.pl-line__tag { grid-row: 1 / span 3; }
+.pl-line__head .pl-tr { margin-top: 4px; }
+.pl-marker .pl-tr { margin-top: 2px; font-size: 12px; color: rgba(255,255,255,.7); }
+.pl-brief .pl-tr { margin-top: 4px; font-size: 13px; }
+.pl-tr--cap { margin-top: 8px; font-size: 13px; }
+.pl-tr--cap span { display: block; font-style: normal; color: var(--pl-ink); }
+@media (max-width: 600px) { .pl-line__tag { grid-row: auto; } }

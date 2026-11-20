@@ -1024,3 +1024,18 @@ body.pf--work { background: #EAE5DC; }
   .wk-cover-pl__text b { font-size: 28px; }
   .wk-cover-pl__text { position: relative; z-index: 1; }
 }
+
+/* Página Proyectos: segunda fila con Aquàrium (3/4) y Plasma (1/4) */
+.wk-item--q3 { grid-column: span 9; }
+.wk-item--q1 { grid-column: span 3; }
+@media (max-width: 760px) { .wk-item--q3, .wk-item--q1 { grid-column: 1 / -1; } }
+@media (min-width: 761px) {
+  .wk-item--q3 .wk-cover-aq--foto { aspect-ratio: 2 / 1; }
+  .wk-item--q3, .wk-item--q1 { grid-row: span 2; display: grid; grid-template-rows: subgrid; row-gap: 0; }
+  .wk-item--q1 .wk-item__media.wk-cover-pl { height: 100%; aspect-ratio: auto; flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 0; padding: 0 clamp(16px, 1.8vw, 24px) clamp(18px, 2vw, 26px); }
+  .wk-item--q1 .wk-cover-pl__objs { position: absolute; left: 50%; translate: -50% 0; top: 9%; height: 42%; gap: 10px; }
+  .wk-item--q1 .wk-cover-pl { background: radial-gradient(70% 45% at 50% 32%, rgba(242,201,76,.28) 0%, rgba(242,201,76,0) 70%), #141414; }
+  .wk-item--q1 .wk-cover-pl__text { position: relative; z-index: 1; gap: 14px; }
+  .wk-item--q1 .wk-cover-pl__text b { font-size: clamp(24px, 2.3vw, 32px); }
+  .wk-item--q1 .wk-item__media.wk-cover-pl .wk-cover-pl__text img { height: 22px; }
+}
