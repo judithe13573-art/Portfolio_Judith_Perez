@@ -225,3 +225,63 @@ body.pl { background: #FFFFFF; }
 .pl-closing { padding: clamp(48px, 6vw, 76px) 0; }
 .pl-logos { margin-top: clamp(24px, 3.5vw, 36px); }
 .pl-end { padding: 28px 0 40px; }
+
+/* ═══ Paleta de la campaña «Segueix el fil» ═══
+   Sale de la imagen principal y de los carteles: crema cálido para explicar,
+   granate profundo para emocionar y ámbar del plasma como acento. */
+.pl {
+  --pl-red: #AB192D;
+  --pl-red-dark: #8C1324;
+  --pl-yellow: #E3A72F;
+  --pl-plasma: #F0B93E;
+  --pl-ink: #2B0A12;
+  --pl-text: #4A2F33;
+  --pl-grey: #F3E8DC;
+  --pl-grey-2: #7A5C5C;
+  --pl-night: #2A0710;
+  --pl-cream: #FBF6F0;
+}
+body.pl, .pl-hero--foto { background: var(--pl-cream); }
+.pl-section--grey { background: linear-gradient(180deg, var(--pl-cream) 0%, var(--pl-grey) 10%, var(--pl-grey) 90%, var(--pl-cream) 100%); }
+.pl-section--dark { background: radial-gradient(70% 70% at 80% 0%, rgba(240,185,62,.16) 0%, rgba(240,185,62,0) 65%), linear-gradient(160deg, #3D0A18 0%, var(--pl-night) 70%); }
+.pl-turn { background: rgba(255,255,255,.05); border-color: rgba(240,185,62,.18); }
+.pl-closing { background: radial-gradient(80% 90% at 50% 0%, #C22036 0%, #AB192D 60%); }
+.pl-closing__sign { color: #FFFFFF; }
+.pl-card, .pl-brief div { background: #FFFFFF; box-shadow: 0 1px 0 rgba(122,18,48,.06), 0 12px 30px -22px rgba(122,18,48,.35); }
+.pl-brief dt { background: var(--pl-red); }
+.pl-facts li { background: #FFFFFF; border-color: rgba(122,18,48,.12); }
+.pl-facts b { color: var(--pl-red); }
+.pl-line__tag { background: var(--pl-night); color: var(--pl-plasma); }
+.pl-line + .pl-line .pl-line__tag { background: var(--pl-red); color: #FFFFFF; }
+.pl-ai-note { background: #FFFFFF; border: 1px solid rgba(122,18,48,.12); }
+.pl-section--ficha { padding-top: 0; }
+.pl-section--ficha .pl-head { margin-bottom: 14px; }
+.pl-hero--foto .pl-tags li { border-color: rgba(122,18,48,.25); }
+.pl-kicker { background: var(--pl-red); }
+/* Bolsas de la paleta: plasma, granate y crema */
+.pl-swatch:nth-child(2) .pl-bag img { filter: hue-rotate(-60deg) saturate(1.5) brightness(.42) contrast(1.2); }
+.pl-swatch:nth-child(3) .pl-bag, .pl-swatch:nth-child(3) .pl-bag::after { background-color: #1E0408; }
+.pl-swatch:nth-child(3) .pl-bag::after { background: linear-gradient(90deg, #1E0408 6%, rgba(30,4,8,0) 24%); }
+.pl-swatch:nth-child(3) .pl-bag img { filter: grayscale(1) sepia(.65) saturate(1.4) brightness(1.5) contrast(.85); }
+.pl-marker { background: var(--pl-night); }
+.pl-section--dark .pl-quote { border-left-color: var(--pl-plasma); }
+
+/* «Volver a proyectos» arriba a la izquierda, sobre la zona clara de la imagen */
+.pl-hero--foto .pl-back--top { position: absolute; z-index: 2; top: clamp(14px, 2vw, 24px); left: clamp(16px, 4vw, 52px); margin: 0; padding: 8px 14px; border-radius: 9999px; background: rgba(251,246,240,.85); color: var(--pl-ink); font-weight: 600; backdrop-filter: blur(4px); }
+.pl-hero--foto .pl-back--top:hover { background: #FFFFFF; color: var(--pl-red); }
+@media (max-width: 600px) { .pl-hero--foto .pl-back--top { top: 8px; left: 10px; padding: 4px 10px; font-size: 12px; } }
+
+/* Líneas de carteles alineadas: texto a la izquierda (fijo al bajar), carteles a la derecha */
+.pl-line { display: grid; grid-template-columns: minmax(220px, 300px) 1fr; gap: clamp(24px, 4vw, 56px); align-items: start; }
+.pl-line__head { position: sticky; top: 96px; display: flex; flex-direction: column; align-items: flex-start; max-width: none; margin: 0; }
+.pl-line__tag { grid-row: auto; margin-bottom: 16px; }
+.pl-line__head .pl-tr { margin-top: 6px; }
+.pl-line__text { margin-top: 14px; font-size: 15px; }
+.pl-line .pl-posters { max-width: none; margin: 0; }
+.pl-line + .pl-line { padding-top: clamp(36px, 4.5vw, 56px); border-top: 1px solid rgba(122,18,48,.12); }
+@media (max-width: 900px) {
+  .pl-line { grid-template-columns: 1fr; gap: 20px; }
+  .pl-line__head { position: static; }
+  .pl-line .pl-posters { grid-template-columns: 1fr 1fr; gap: 14px; }
+}
+@media (max-width: 600px) { .pl-line .pl-posters { grid-template-columns: 1fr; } }
