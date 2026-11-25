@@ -1049,3 +1049,7 @@ body.pf--work { background: #EAE5DC; }
   .wk-item--q1 .wk-item__media.wk-cover-sf { height: 100%; min-height: 0; }
   .wk-item--q1 .wk-item__media.wk-cover-sf img { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; object-fit: contain; object-position: 50% 50%; }
 }
+
+/* La misma portada en Inicio: imagen horizontal a todo lo ancho */
+.wk-item--full .wk-item__media.wk-cover-sf img { display: block; width: 100%; height: auto; aspect-ratio: 21 / 8; object-fit: cover; object-position: 50% 71%; }
+@media (max-width: 760px) { .wk-item--full .wk-item__media.wk-cover-sf img { aspect-ratio: 1672 / 941; } }
