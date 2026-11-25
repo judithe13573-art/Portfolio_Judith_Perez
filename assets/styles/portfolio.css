@@ -1039,3 +1039,13 @@ body.pf--work { background: #EAE5DC; }
   .wk-item--q1 .wk-cover-pl__text b { font-size: clamp(24px, 2.3vw, 32px); }
   .wk-item--q1 .wk-item__media.wk-cover-pl .wk-cover-pl__text img { height: 22px; }
 }
+
+/* Portada «Segueix el fil» en Proyectos: cartel en ordenador, imagen horizontal en móvil */
+.wk-item__media.wk-cover-sf { background: #1E0006; }
+.wk-cover-sf .wk-item__tags span { background: rgba(43,10,18,.72); }
+.wk-item__media.wk-cover-sf picture { display: block; width: 100%; height: 100%; }
+.wk-item--q1 .wk-item__media.wk-cover-sf img { display: block; width: 100%; height: auto; aspect-ratio: 1672 / 941; object-fit: cover; }
+@media (min-width: 761px) {
+  .wk-item--q1 .wk-item__media.wk-cover-sf { height: 100%; min-height: 0; }
+  .wk-item--q1 .wk-item__media.wk-cover-sf img { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; object-fit: contain; object-position: 50% 50%; }
+}
